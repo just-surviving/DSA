@@ -37,3 +37,35 @@ int main()
 // Time Complexity: O(2^n)  Space Complexity: O(n)
 // Output:
 //{} {3} {2} {2 3} {1} {1 3} {1 2} {1 2 3}
+
+
+
+// leetcode solution
+
+// class Solution {
+// private:
+//     void printF(int ind, vector<int> &ds, vector<int> &arr, int n, vector<vector<int>> &ans) {
+//         if (ind == n) {
+//             ans.push_back(ds); // Store the subset
+//             return;
+//         }
+
+//         // Not pick the element
+//         printF(ind + 1, ds, arr, n, ans);
+
+//         // Pick the element
+//         ds.push_back(arr[ind]);
+//         printF(ind + 1, ds, arr, n, ans);
+//         ds.pop_back();  // Backtrack
+//     }
+
+// public:
+//     vector<vector<int>> subsets(vector<int>& nums) {
+//         int n = nums.size();
+//         vector<int> ds;
+//         vector<vector<int>> ans; // Store subsets
+//         printF(0, ds, nums, n, ans);
+//         return ans;
+//     }
+// };
+// // Time Complexity: O(2^n)  Space Complexity: O(n)
